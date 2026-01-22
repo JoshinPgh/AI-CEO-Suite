@@ -1,37 +1,39 @@
 # COLOR-DEX CONTEXT DASHBOARD
-> **Status:** LIVE DOCUMENT
-> **Last Updated:** [Date]
+> **Status:** STABLE / PRE-BETA
+> **Last Updated:** Jan 21, 2026
 > **Governing Logic:** Async Shadow Auditor
 
 ## 1. Verified Constraints (Immutable Rules)
 *All code and decisions MUST adhere to these. Contradictions are SEV3.*
 
-* **Tech Stack:** [e.g., React Native (Expo), TypeScript, Firebase, Node.js]
-* **Styling:** [e.g., Tailwind CSS, No inline styles]
-* **Architecture:** [e.g., MVVM pattern, Strict separation of UI and Logic]
-* **Authentication:** [e.g., Firebase Auth only]
-* **Database:** [e.g., Firestore for user data, SQL for inventory?]
-* **Critical Rule:** [e.g., Never delete user data without a soft-delete flag]
+* **Build Pipeline:** GitHub Actions ONLY. No local "C: Drive" builds for production.
+* **Distribution Strategy:** Native Wrapper (App Store/Play Store). No loose APKs/Web-only versions.
+* **Native Access:** Must utilize native device APIs (Camera, Alarm, Timer) via the wrapper, not web fallbacks.
+* **Source of Truth:** The GitHub Repository is the single source of truth.
+* **Environment:** CI/CD driven.
 
 ## 2. Current State (Mutable)
 *Where are we right now?*
 
-* **Active Sprint:** [e.g., Fixing the Color Sorting Algorithm & User Profile UI]
-* **Last Successful Milestone:** [e.g., Login screen works and connects to Firebase]
-* **Current Blocker:** [e.g., The app crashes when sorting more than 50 colors]
-* **Next Immediate Step:** [e.g., Refactor the `sortColors` function in `utils.ts`]
+* **Active Sprint:** Beta Release Candidates & Store Submission.
+* **Current Status:** Stable. Recovered from "crash" phase. Ready for Beta.
+* **External Blockers:**
+    * **Apple:** Awaiting Apple Developer Account approval (Account level). App NOT submitted yet.
+    * **Google:** Google Play Developer access/approval is GRANTED.
+* **Immediate Next Step:** Finalize the GitHub Actions workflow to auto-generate the `.ipa` and `.aab` files for the stores.
 
 ## 3. Active Risks
 *What is threatening the project?*
 
-* [e.g., "Spaghetti code" in the main view component]
-* [e.g., API rate limits on the color recognition service]
+* **Approval Delays:** Apple Developer verification can take time.
+* **Wrapper Regression:** Ensuring the "wrapped" version actually solves the camera/timer glitches seen in the previous version.
 
 ## 4. Recent Decisions Log (The Memory)
-* **[Date]:** Decided to switch from SQL to NoSQL for faster reads.
-* **[Date]:** Abandoned feature "Auto-Palette" because it was too buggy (See Parking Lot).
+* **[Critical Pivot]:** STOPPED local development on Windows/C: Drive (Android Studio loop).
+* **[Decision]:** MIGRATED build process to GitHub Actions to ensure consistency.
+* **[Decision]:** RE-PRIORITIZED "Native Wrapping" to resolve hardware access bugs (Camera/Timer/Alarm) that were plaguing the web version.
 
-## 5. File Map (Where things live)
-* **Logic:** `src/services/`
-* **UI:** `src/components/`
-* **State Management:** `src/context/`
+## 5. File Map & Resources
+* **Code Repo:** ColorDex (Private)
+* **Memory Repo:** AI-CEO-Suite
+* **CI/CD:** GitHub Actions (Workflows folder)
