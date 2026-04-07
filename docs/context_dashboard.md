@@ -18,7 +18,7 @@
 * **Active Sprint:** Beta Release Candidates & Store Submission.
 * **Current Status:** Stable. Recovered from "crash" phase. Ready for Beta.
 * **External Blockers:**
-    * **Apple:** Awaiting Apple Developer Account approval (Account level). App NOT submitted yet.
+    * **Apple:** Awaiting Apple Developer Account approval (Account level). GRANTED.
     * **Google:** Google Play Developer access/approval is GRANTED.
 * **Immediate Next Step:** Finalize the GitHub Actions workflow to auto-generate the `.ipa` and `.aab` files for the stores.
 
