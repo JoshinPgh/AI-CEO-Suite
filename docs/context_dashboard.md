@@ -52,8 +52,8 @@
 | Machine | ID | Primary Role |
 |---|---|---|
 | HP Laptop | 851Mobile-1 | Primary dev machine. Cursor + Claude Code CLI via WSL2. |
-| ASUS Ryzen Desktop | 851Office-1 | Secondary workstation |
-| ASUS Ryzen Desktop | 851Office-2 | Secondary workstation |
+| ASUS Ryzen Desktop | 851Office-1 | Ubuntu Seerver |
+| ASUS Ryzen Desktop | 851Office-2 | Memory System |
 | MacBook Air | — | iOS/Xcode utility only |
 | Travel Laptop | — | Mobile work |
 
